@@ -1,0 +1,85 @@
+
+<!-- All the dependency files needed for css -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+<!-- file used inside script tag to render bootstrap css -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<!-- bootstrap navigation bar -->
+<nav class="navbar navbar-inverse navbar-expand bg">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src="../../assets/Images/logobetter.jpg" [routerLink]="['/']" id="logo" alt="lOGO" (click)="openMain()" class="loginBtn">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li *ngIf="isLoggedIn != ''"><a (click)="openDashboard($event)" [routerLink]="['/animal', isLoggedIn]" mat-button class="loginBtn">
+            Adopt
+          </a>
+        </li>
+
+        <li *ngIf="isLoggedIn == ''"><a (click)="openDashboard($event)" [routerLink]="['/animal']" mat-button class="loginBtn">
+          Adopt
+        </a>
+      </li>
+   <!--      <li> <a [routerLink]="['/orderhistory']" mat-button class="loginBtn" (click)="setShowMe()">
+            About Us
+          </a></li> -->
+
+        <li> <a [routerLink]="['/aboutUs']"> About </a>
+
+
+        </li>
+        <li><a [routerLink]="['/events']" mat-button class="loginBtn">
+
+            Events
+          </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="signIn == false" class="signedInUser">{{username}}</li>
+        <li *ngIf="signIn == false"><a  mat-button class="loginBtn" (click)="onSignOut()">Sign Out</a></li>
+        <!-- <li><a [routerLink]="['/login']">Login</a></li> -->
+        <li *ngIf="signIn == true"><a mat-button class="loginBtn" (click)="openLogin()">Login</a></li>
+        <li *ngIf="signIn == true"><a mat-button class="loginBtn" (click)="openSignUp()"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
+        <!-- <li><a [routerLink]="['/signup']"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li> -->
+        <li><a href="#">
+            <nav role='navigation'>
+              <div id="menuToggle">
+                <!-- checkbox used as click so as to use the :checked selector on it. -->
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                  <a (click)="openDashboard($event)" [routerLink]="['/animal']" mat-button class="loginBtn" >
+                    Adopt
+                  </a> <br><br>
+                  <a [routerLink]="['/aboutUs']" mat-button class="loginBtn" (click)="setShowMe()">
+                    About Us
+                  </a> <br><br>
+                  <a [routerLink]="['/events']" mat-button  (click)="setShowMe()" class="loginBtn">
+                    Events
+                  </a> <br><br>
+                      <a href="https://www.instagram.com/arlboston/" class="icon-link">
+                       <i class="fab fa-instagram"></i>
+                      </a>
+
+                      <a href="https://www.facebook.com/AnimalRescueLeagueofBoston"  class="icon-link">
+                       <i class="fab fa-facebook"></i>
+                      </a>
+
+                      <a href="https://twitter.com/ARLBostonRescue"  class="icon-link">
+                        <i class="fab fa-twitter-square"></i>
+                       </a>
+
+                </ul>
+              </div>
+            </nav>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+

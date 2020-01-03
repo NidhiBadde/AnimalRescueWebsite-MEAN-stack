@@ -1,0 +1,83 @@
+
+
+
+<div class="hamburger">
+    <a (click)="toggle()" id="bt" href="#">
+        <i class="fas fa-bars" ></i>
+        <i class="fas fa-times" *ngIf="show"></i>
+    </a>
+</div>
+
+
+  <ng-container *ngIf="show">
+  <nav class="sidebar" >
+
+    <ul class="nav-list">
+
+         <li class="nav-item">
+
+          <a href="#" class="nav-link" routerLink="/home">
+
+            <i class="fas fa-home"></i>Home
+
+          </a>
+
+         </li>
+
+         <li class="nav-item">
+
+          <a class="nav-link" routerLink="/aboutUs">
+
+            <i class="fas fa-address-card"></i>About Us
+
+          </a>
+
+         </li>
+
+         <li class="nav-item">
+
+          <a href="#" class="nav-link" routerLink="/contactUs">
+
+            <i class="fas fa-envelope"></i>Contact Us
+
+          </a>
+
+         </li>
+    </ul>
+
+ <div class="social-media">
+
+   <a href="#"  class="icon-link">
+    <i class="fab fa-instagram"></i>
+   </a>
+
+   <a href="#"  class="icon-link">
+    <i class="fab fa-twitter-square"></i>
+   </a>
+
+   <a href="#"  class="icon-link">
+    <i class="fab fa-linkedin"></i>
+   </a>
+
+   <a href="#"  class="icon-link">
+    <i class="fab fa-github-square"></i>
+   </a>
+
+ </div>
+  </nav>
+
+</ng-container>
+<!--
+
+<main>
+
+<div class="zoom-content">
+
+  <section>
+
+
+  </section>
+
+</div>
+
+</main> -->

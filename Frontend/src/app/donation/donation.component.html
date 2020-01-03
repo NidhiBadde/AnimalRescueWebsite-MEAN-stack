@@ -1,0 +1,34 @@
+<!-- <mat-form-field>
+  <textarea matInput></textarea>
+</mat-form-field> -->
+
+<div class="donation-container overlay" *ngIf="!openPayment">
+    <form #userForm1="ngForm" (ngSubmit)="addDonation(userForm1.value)">
+
+    <div class="donation-box">
+      <div class="title">Donation Information</div>
+      <div class="fields">
+        <input type="text" name="firstName" placeholder="First Name" minlength="3" maxlength=30 pattern="^[a-zA-Z\s]+$"
+        required [(ngModel)]="firstName">
+        <input type="text" name="lastName" placeholder="Last Name" minlength="3" maxlength=30 pattern="^[a-zA-Z\s]+$"
+        required  [(ngModel)]="lastName">
+        <input type="text" name="email" placeholder="Email" required  [(ngModel)]="email">
+      </div>
+
+
+      <div class="amount">
+        <div class="button">$<input type="text" name="donationAmount" class="set-amount" placeholder=""  [(ngModel)]="donationAmount"> </div>
+      </div>
+      <div>
+          <!-- <a [routerLink]="['/payment', {donationAmount : donationAmount}]">Donate Now</a> -->
+          <button mat-button name="submit" class="btnAlign">Donate Now</button>
+          <!-- <a [routerLink]="['/payment', donationAmount]">Donate Now</!--> -->
+          <!-- <a routerLink="" class="donate-button">Back</a> -->
+      </div>
+    </div>
+  </form>
+  </div>
+
+  <div *ngIf="openPayment">
+    <app-payment (loadPayment)="insideDonation()" (amountToDonate)="donationAmount"></app-payment>
+  </div>

@@ -1,0 +1,18 @@
+<div class="overlay">
+    <h3 mat-dialog-title>Login</h3>
+      <form #userForm1="ngForm" (ngSubmit)="getUser(userForm1.value)">
+        <div class="example-container">
+            <mat-form-field>
+                <input matInput placeholder="Username" type="text" [(ngModel)]="username" name="username">
+                <!-- <app-control-messages [control]="userForm.get('username')"></app-control-messages> -->
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Password" type="password" [(ngModel)]="password" name="password">
+            </mat-form-field>
+            <div mat-dialog-actions>
+              <button mat-button (click)="onNoClick()" class="btnAlign">Cancel</button>
+              <button mat-button name="submit" class="btnAlign">Login</button>
+            </div>
+        </div>
+      </form>
+  </div>

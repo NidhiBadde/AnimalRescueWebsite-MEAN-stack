@@ -1,0 +1,15 @@
+<div class="overlay" (click)="onClick($event)">
+    <button type="button" class="close crossStyle" (click)="closeDialog()" aria-label="Close">
+        <span aria-hidden="true" >×</span>
+    </button>
+    <h3 mat-dialog-title>{{ name }}</h3>
+     <img [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+image)" class="setImage">
+     <div class="example-container">
+          <div><span class="animal-label">Breed:&nbsp;</span><span class="animal-item">{{breed}}</span></div>
+          <div><span class="animal-label">Gender:&nbsp;</span><span class="animal-item">{{gender}}</span></div>
+          <div><span class="animal-label">Age:&nbsp;</span><span class="animal-item">{{age}}</span></div>
+          <div><span class="animal-label">Health:&nbsp;</span><span class="animal-item">Vaccinations up to date, spayed / neutered</span></div>
+          <div class="blog-post descriptionClass">{{description}}</div>
+          <br>
+      </div>
+  </div>

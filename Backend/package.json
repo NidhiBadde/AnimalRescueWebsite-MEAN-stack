@@ -1,0 +1,32 @@
+{
+  "name": "norest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neu-mis-info6150-fall-2019/final-project-norest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-fall-2019/final-project-norest/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-fall-2019/final-project-norest#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "mongoose": "^5.7.10",
+    "nodemailer": "^6.4.1",
+    "nodemon": "^1.19.4"
+  }
+}

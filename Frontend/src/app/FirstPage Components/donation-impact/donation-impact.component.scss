@@ -1,0 +1,175 @@
+
+// --------last grid -------------
+
+// styled the main container
+
+.container
+{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.heading
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+// added a small line below header
+.heading::after{
+    background: #d52b1e;
+      content: "'";
+      display: block;
+      height: 4px;
+      margin: 15px auto 0;
+      text-indent: -9999px;
+      width: 44px;
+}
+
+
+
+// --------last grid -------------
+
+
+// gride to display last grid contents
+
+.DonationSectionGrid{
+    display: grid;
+    margin-left: 15%;
+   
+}
+
+.donationgrid {
+    display: grid;
+    grid-gap: 7px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 5fr 6fr 6fr;
+    background-color: #fff;
+    color: #444;
+    max-width: 80%;
+    }
+
+    // style to display box
+
+    .box {
+        display: grid;
+        padding: 0;        
+        min-height: 260px;
+        position: relative;
+        overflow: hidden;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+        // opacity: 0.90;
+        align-content: flex-end;
+        
+    }
+
+    // added images and their placement in grid
+    .a {
+        
+        background-image: url(../Images/DonationSection1.jpg);
+        grid-column: 1 / 3  ;
+       
+       
+        
+    }
+    .b {
+        background-image: url(../Images/DonationSection2.jpeg);
+        grid-column: 1  ;
+        
+       
+    }
+    .c {
+        background-image: url(../Images/animals-adopted.jpg);
+        grid-column: 2 ;
+       
+    }
+    .d {
+        background-image: url(../Images/DonationSection4.jpg);
+        grid-column: 1;
+        
+    }
+
+    .e {
+        background-image: url(../Images/DonationSection5.jpg);
+        grid-column: 2;
+        
+    }
+
+
+    // ------------donation grid text content--------
+
+    // added shade to the image from bottom to top
+
+    .A{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top,#000,rgba(0,0,0,0));
+    }
+   
+
+    .contentsize1
+    {
+        max-width:20%;
+        margin-left: 700px !important;
+        margin-top: 50px ;
+        // padding-bottom: 100px !important;
+        
+    }
+
+    .B
+    {
+        max-width: 40%;
+        margin-left: 30% !important;       
+    }
+
+    .C{
+        max-width: 50%;
+        margin-left: 30% !important;
+       
+    }
+    .D{
+       
+        margin-left: 22% !important;
+        max-width: 60%;
+       
+    }
+
+
+    // added grid to content
+.donationcontentgrid{
+
+    display: grid;
+    grid-gap: 2px;
+    grid-template-rows: auto auto auto;
+    background-color: none;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    font-style: normal;
+    z-index: 99;
+    align-content: center;
+    padding: 50px 20px 0px 20px;
+    // margin: 50px auto auto auto;
+    
+    width: auto;
+   
+    
+
+}
+
+.icons{
+    align-content: center;
+    max-width: 100% !important;
+    max-height: 20px !important;
+}
+
+
+.fa-plus-square .fa-home .fa-user-shield{
+    color :white;
+    max-width: 50px;
+    max-height: 50px;
+  font-size: 105px;
+  padding: 10px;
+}

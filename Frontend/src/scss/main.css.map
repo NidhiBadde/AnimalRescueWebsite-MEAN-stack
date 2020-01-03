@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "main.scss",
+        "_variable.scss",
+        "_header.scss",
+        "_footer.scss",
+        "_carousel.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

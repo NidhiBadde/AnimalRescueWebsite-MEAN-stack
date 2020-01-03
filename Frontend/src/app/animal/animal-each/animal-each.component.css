@@ -1,0 +1,40 @@
+.overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Black background with opacity */
+  cursor: pointer;
+  /* Add a pointer on hover */
+}
+
+.overlay .crossStyle {
+  outline: none !important;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.overlay .setImage {
+  float: left;
+  padding-right: 10px;
+  height: 260px;
+  width: 350px;
+}
+
+.overlay .example-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.overlay .example-container .btnAlign {
+  width: 50%;
+}
+
+.overlay .example-container > * {
+  width: 100%;
+}
+/*# sourceMappingURL=animal-each.component.css.map */

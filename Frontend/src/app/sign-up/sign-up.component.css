@@ -1,0 +1,26 @@
+.overlay {
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Black background with opacity */
+  cursor: pointer;
+  /* Add a pointer on hover */
+}
+
+.overlay .example-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.overlay .example-container .btnAlign {
+  width: 50%;
+}
+
+.overlay .example-container > * {
+  width: 100%;
+}
+/*# sourceMappingURL=sign-up.component.css.map */

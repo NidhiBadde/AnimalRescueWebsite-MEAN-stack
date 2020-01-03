@@ -1,0 +1,9 @@
+@mixin imagedimension($width,$height)
+{
+    width: $width;
+    height: $height;
+}
+@mixin contentsize($size)
+{
+  font-size:$size;
+}

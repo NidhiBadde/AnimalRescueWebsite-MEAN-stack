@@ -1,0 +1,156 @@
+// ------------------styling for 4 grids --------------
+@import "./../../../scss/variable";
+@import "./../../../scss/mixin";
+.container
+{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading::after{
+    background: $content-color;
+      content: "'";
+      display: block;
+      height: 4px;
+      margin: 15px auto 0;
+      text-indent: -9999px;
+      width: 44px;
+}
+
+.column_inner
+{
+
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    margin: 0;
+
+}
+
+// wrote code as parent and child where we can change the background configuration on hover
+.wrapper {
+    
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}   
+
+.right {float: right !important;}
+/* Image zoom on hover + Overlay colour */
+.parent {
+  @include imagedimension(98%,450%);
+    //width: 98%;
+    margin: 15px;
+    height: 450px;
+    // border: 1px solid gray;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: linear-gradient(to top,#000,rgba(0,0,0,0));
+    border-radius: 5px;
+
+}
+
+.child {
+  @include imagedimension(100%,100%);
+    // height: 100%;
+    // width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+/* Several different images */
+.bg-one {background-image: url(../Images/Kittens_grid1.jpg);}
+.bg-two {background-image: url(../Images/dogs-training.jpg);}
+.bg-three {background-image: url(../Images/medical-care.jpg);}
+.bg-four {background-image: url(../Images/Community_programs.jpg);}
+
+
+.parent:hover .child, .parent:focus .child {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.parent:hover .child:before, .parent:focus .child:before {
+    display: block;
+}
+
+.parent:hover a, .parent:focus a {
+    display: block;
+}
+
+.child:before {
+    content: "";
+    display: none;
+    @include imagedimension(100%,100%);
+    // height: 100%;
+    // width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(190, 192, 194, 0.75);
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 960px) {
+    .parent {width: 100%; margin: 20px 0px}
+        .wrapper {padding: 20px 20px;}
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  .column {
+    float: left;
+    width: 25%;
+
+    // padding: 5px;
+  }
+
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+.grid1content{
+    display: table-cell;
+    padding: 300px 10px 10px 90px;
+    vertical-align: bottom;
+    color: white;
+    position: relative;
+
+
+
+}
+// style for all the h4 below div
+div > h4
+{
+    font-weight: bolder;
+}
+
+.linkwhite
+{
+    color: white;
+}
+

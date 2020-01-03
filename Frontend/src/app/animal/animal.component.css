@@ -1,0 +1,52 @@
+.dogimage {
+  width: 100%;
+}
+
+.card {
+  margin: auto;
+  font-family: arial;
+}
+
+.animalheader {
+  font-family: monospace;
+  font-size: 35px;
+  font-weight: small;
+  height: 40%;
+  width: 50%;
+  background-color: #c42020;
+}
+
+.animaldesc {
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: small;
+}
+
+a:link, a:visited {
+  background-color: #c42020;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #eee3e3;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.alignDiv {
+  margin-bottom: 1px;
+  background-color: #c42020;
+  border-color: #c42020;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=animal.component.css.map */

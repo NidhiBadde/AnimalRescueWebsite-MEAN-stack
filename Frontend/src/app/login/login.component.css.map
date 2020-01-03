@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,QAAQ,EAAE,MAAM;EAChB,gBAAgB,EAAE,wBAAuB;EAAE,mCAAmC;EAC9E,MAAM,EAAE,OAAO;EAAE,4BAA4B;CAY9C;;AAfD,AAIE,QAJM,CAIN,kBAAkB,CAAC;EACjB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;CAIvB;;AAVH,AAOI,QAPI,CAIN,kBAAkB,CAGhB,SAAS,CAAA;EACP,KAAK,EAAE,GAAG;CACX;;AATL,AAYE,QAZM,CAYN,kBAAkB,GAAG,CAAC,CAAC;EACrB,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "login.component.scss"
+    ],
+    "names": [],
+    "file": "login.component.css"
+}

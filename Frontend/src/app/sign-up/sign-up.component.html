@@ -1,0 +1,95 @@
+<!-- <form #userForm="ngForm" (ngSubmit)="saveUser(userForm.value)">
+    Name : <input type="text" [(ngModel)]="name" name="name">
+    UserName : <input type="text" [(ngModel)]="username" name="username">
+    Password : <input type="password" [(ngModel)]="password" name="password">
+    <button name="submit">Sign Up</button>
+</form>
+<form #userForm1="ngForm" (ngSubmit)="getUser(userForm1.value)">
+    UserName : <input type="text" [(ngModel)]="username" name="username">
+    Password : <input type="password" [(ngModel)]="password" name="password">
+    <button name="submit">Login</button>
+</form> -->
+<!--
+<div class="overlay">
+  <section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex="500px" fxFlex.xs="100%">
+      <mat-card-title>Sign Up</mat-card-title>
+        <form #userForm="ngForm" (ngSubmit)="saveUser(userForm.value)">
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="Full Name" type="text" [(ngModel)]="fname" name="fname">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput [matDatepicker]="picker" placeholder="Date of Birth">
+              <mat-datepicker-toggle matSuffix [for]="picker">
+                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+              </mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <textarea matInput placeholder="Address"></textarea>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Username" type="text" [(ngModel)]="username" name="username">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Password" type="password" [(ngModel)]="password" name="password">
+            </mat-form-field>
+            <button mat-button name="cancel"(click)="onNoClick()">Cancel</button>
+            <button mat-button name="submit">Submit</button>
+          </div>
+        </form>
+      </mat-card>
+    </section>
+  </div> -->
+  <!-- <form #userForm1="ngForm" (ngSubmit)="getUser(userForm1.value)">
+    <h1>Login</h1>
+    <div class="example-container">
+      <mat-form-field>
+        <input matInput placeholder="Username" type="text" [(ngModel)]="username" name="username">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Password" type="password" [(ngModel)]="password" name="password">
+      </mat-form-field>
+      <button mat-button name="cancel">Cancel</button>
+      <button mat-button name="submit">Login</button>
+    </div>
+  </form>
+</mat-card>
+</section>
+</div> -->
+<div class="overlay">
+    <h3 mat-dialog-title>Sign Up</h3>
+      <form #userForm="ngForm" (ngSubmit)="saveUser(userForm.value)">
+        <div class="example-container">
+          <mat-form-field>
+            <input matInput placeholder="Full Name" type="text" [(ngModel)]="name" name="name" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput [matDatepicker]="picker" placeholder="Date of Birth" [(ngModel)]="dateOfBirth" name="dateOfBirth">
+            <mat-datepicker-toggle matSuffix [for]="picker">
+              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="Address"  [(ngModel)]="address" name="address" ></textarea>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Username" type="text" [(ngModel)]="username" name="username" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Password" type="password" [(ngModel)]="password" name="password" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <mat-form-field>
+              <input matInput placeholder="Email" type="email" [(ngModel)]="email" name="email" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+          <div mat-dialog-actions >
+            <button mat-button (click)="onNoClick()" class="btnAlign">Cancel</button>
+            <button mat-button name="submit" class="btnAlign">Create</button>
+          </div>
+        </div>
+      </form>
+  </div>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div *ngIf="animals" >
+      <div *ngFor="let recipient of animalCommentMap | keyvalue">
+          <img class="animalimage" [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+recipient.key.image)">
+          <br>
+          <br>
+          <div *ngIf="recipient.value; else elseBlock" >
+              <input type="text" value="{{ recipient.value.comment }}" disabled>
+          </div>
+          <ng-template #elseBlock>
+              <form #userForm="ngForm" (ngSubmit)="updateComment(userForm.value, recipient)">
+                <input #inputComm type="text" [(ngModel)]="comment" name="comment" [disabled]="inputDisabled"> &nbsp;&nbsp;
+                <div *ngIf="inputDisabled == false">
+                    <button name="submit">Comment</button>
+                </div>
+              </form>
+          </ng-template>
+          <br>
+          <br>
+      </div>
+    </div>
+  </body>
+</html>

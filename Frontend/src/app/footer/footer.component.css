@@ -1,0 +1,38 @@
+.container {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.container .header, .container .city {
+  font-weight: bolder;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 430px 430px 430px;
+      grid-template-columns: 430px 430px 430px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.grid .address {
+  color: darkgrey;
+  font-size: 14px;
+}
+
+.grid .address a:link, .grid .address a:visited {
+  color: darkgrey;
+  text-decoration: none;
+}
+
+.grid .address a:hover {
+  color: red;
+}
+
+.grid .fa-map-marker-alt, .grid .fa-phone-volume, .grid .fa-envelope {
+  color: grey;
+  font-size: 15px;
+  padding: 10px;
+}
+/*# sourceMappingURL=footer.component.css.map */

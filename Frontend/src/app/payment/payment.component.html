@@ -1,0 +1,223 @@
+
+<br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div id="pay-invoice" class="card">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h4 class="text-center">Pay Invoice</h4>
+                            </div>
+                            <form action="" method="post" novalidate="novalidate" class="needs-validation"
+                                #regForm='ngForm' (ngSubmit)="onClickPlaceOrder()">
+                                <div class="form-group text-center">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="text-muted fa fa-cc-visa fa-2x"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-cc-mastercard fa-2x"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-cc-amex fa-2x"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-cc-discover fa-2x"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="form-group">
+
+                                    <label for="cc-payment" class="control-label mb-1">Payment amount</label>
+                                    <input id="cc-payment" name="cc-payment" type="text" class="form-control"
+                                        aria-required="true" aria-invalid="false" required value=${{amount}}.00 [disabled]="true" >
+                                    <span class="invalid-feedback">Enter the payment amount</span>
+                                </div>
+                                <div class="form-group has-success">
+                                    <label for="cc-name" class="control-label mb-1">Name on card</label>
+
+                                    <input ngModel name="ccname"  #ccname="ngModel" id="cc-name" type="text"
+                                        class="form-control cc-name" minlength="3" maxlength=30 pattern="^[a-zA-Z\s]+$"
+                                        required [(ngModel)]= "username" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="cc-number" class="control-label mb-1">Card number</label>
+                                    <div class="controls">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                 <!-- first set of card number  is required, has to be minimum length 4 and
+                                                must be numeric -->
+                                                <input type="text" class="form-control" minlength="4" maxlength="4"
+                                                    pattern="[0-9]*" title="First four digits" required="" ngModel
+                                                    name="ccnum1" #ccnum1="ngModel" [(ngModel)]= "cardnum1" >
+
+                                                <div class="alert alert-danger" *ngIf="ccnum1.touched && !ccnum1.valid">
+
+                                                    <div *ngIf="ccnum1.errors.required">
+                                                        Can't be left empty.
+                                                    </div>
+                                                    <div *ngIf="ccnum1.errors.minlength">
+                                                        Min Length 4.
+                                                    </div>
+                                                    <div *ngIf="ccnum1.errors.pattern">
+                                                        Only digits.
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-3">
+                                             <input type="text" class="form-control" minlength="4" maxlength="4"
+                                                    pattern="[0-9]*" title="Second four digits" required="" ngModel
+                                                    name="ccnum2" #ccnum2="ngModel" [(ngModel)]= "cardnum2" >
+                                                <!-- second set of card number  is required, has to be minimum length 4 and
+                                                must be numeric -->
+                                                <div class="alert alert-danger" *ngIf="ccnum2.touched && !ccnum2.valid" >
+
+                                                  <div *ngIf="ccnum2.errors.required">
+                                                        Can't be left empty.
+                                                    </div>
+                                                    <div *ngIf="ccnum2.errors.minlength">
+                                                        Min Length 4.
+                                                    </div>
+                                                    <div *ngIf="ccnum2.errors.pattern">
+                                                        Only digits.
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <input type="text" class="form-control" minlength="4" maxlength="4"
+                                                    pattern="[0-9]*" title="Third four digits" required="" ngModel
+                                                    name="ccnum3" #ccnum3="ngModel" [(ngModel)]= "cardnum3" >
+                                                <!-- third set of card number  is required, has to be minimum length 4 and
+                                                must be numeric -->
+                                                <div class="alert alert-danger" *ngIf="ccnum3.touched && !ccnum3.valid">
+                                                    <div *ngIf="ccnum3?.errors.required">
+                                                        Can't be left empty.
+                                                    </div>
+                                                    <div *ngIf="ccnum3?.errors.minlength">
+                                                        Min Length 4.
+                                                    </div>
+                                                    <div *ngIf="ccnum3?.errors.pattern">
+                                                        Only digits.
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-3">
+                                                <!-- last set of card number  is required, has to be minimum length 4 and
+                                                must be numeric -->
+
+                                                <input type="text" class="form-control" minlength="4" maxlength="4"
+                                                    pattern="[0-9]*" title="Second four digits" required="" ngModel
+                                                    name="ccnum4" #ccnum4="ngModel" [(ngModel)]= "cardnum4" >
+
+                                                <div class="alert alert-danger" *ngIf="ccnum4.touched && !ccnum4.valid" >
+                                                    <div *ngIf="ccnum4?.errors.required">
+                                                        Can't be left empty.
+                                                    </div>
+                                                    <div *ngIf="ccnum4?.errors.minlength">
+                                                        Min Length 4.
+                                                    </div>
+                                                    <div *ngIf="ccnum4?.errors.pattern">
+                                                        Only digits.
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+
+
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="cc-exp" class="control-label mb-1">Expiration</label>
+
+
+
+                                            <select class="form-control" name="cc_exp_mo">
+                                                <option value="01">January</option>
+                                                <option value="02">February</option>
+                                                <option value="03">March</option>
+                                                <option value="04">April</option>
+                                                <option value="05">May</option>
+                                                <option value="06">June</option>
+                                                <option value="07">July</option>
+                                                <option value="08">August</option>
+                                                <option value="09">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                            <span class="invalid-feedback">Enter the expiration date</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="cc-exp" class="control-label mb-1">Expiration</label>
+                                            <select class="form-control" name="cc_exp_yr">
+
+                                                <option>2019</option>
+                                                <option>2020</option>
+                                                <option>2021</option>
+                                                <option>2022</option>
+                                                <option>2023</option>
+                                                <option>2024</option>
+                                                <option>2025</option>
+                                                <option>2026</option>
+                                                <option>2027</option>
+                                            </select>
+                                            <span class="invalid-feedback">Enter the expiration date</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-4">
+                                        <label for="x_card_code" class="control-label mb-1">Security code</label>
+                                        <div class="input-group">
+                                             <!-- security code is required, has to be minimum length 3 and
+                                                must be numeric -->
+                                            <input type="text" class="form-control" minlength="3" maxlength="3"
+                                                pattern="[0-9]*" title="CVV" required="" ngModel name="ccv"
+                                                #cvv="ngModel" [(ngModel)]= "cvvcode" >
+
+                                            <!-- <div class="alert alert-danger" *ngIf="cvv.touched && !cvv.valid"> -->
+                                                    <div class="alert alert-danger" *ngIf="submitted && !cvv.valid">
+                                                <div *ngIf="cvv?.errors.required">
+                                                    Can't be left empty.
+                                                </div>
+                                                <div *ngIf="cvv?.errors.minlength">
+                                                    Min Length 3.
+                                                </div>
+                                                <div *ngIf="cvv?.errors.pattern">
+                                                    Only digits.
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div>
+                                <button id="payment-button" type="submit" class="btn btn-lg btn-danger btn-block" data-toggle="modal" data-target="#exampleModal">
+                                    <i class="fa fa-lock fa-lg"></i>&nbsp;
+                                  Pay ${{amount   }}.00
+                                </button>
+
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+<br>
+<br>

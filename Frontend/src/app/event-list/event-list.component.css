@@ -1,0 +1,38 @@
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+.mat-expansion-panel {
+  border: 0.5px solid red;
+  border-radius: 10px !important;
+  margin: 20px;
+  min-height: 70px;
+}
+
+.mat-expansion-panel {
+  background-color: #fdfdfd !important;
+}
+
+.test :hover {
+  background-color: #fdfdfd !important;
+}
+
+.pointerCursor {
+  cursor: pointer;
+}
+
+.bookingBtn {
+  color: #ffffff;
+  outline: 0;
+  background-color: #e40505;
+}
+
+.test2 :hover {
+  background-color: orange !important;
+}
+
+.bookingBtn:hover {
+  background-color: #ff0505 !important;
+}
+/*# sourceMappingURL=event-list.component.css.map */

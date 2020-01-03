@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "homecontent.component.scss"
+    ],
+    "names": [],
+    "file": "homecontent.component.css"
+}

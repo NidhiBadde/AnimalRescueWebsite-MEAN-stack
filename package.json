@@ -1,0 +1,28 @@
+{
+    "name": "norest",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/neu-mis-info6150-fall-2019/final-project-norest.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/neu-mis-info6150-fall-2019/final-project-norest/issues"
+    },
+    "homepage": "https://github.com/neu-mis-info6150-fall-2019/final-project-norest#readme",
+    "dependencies": {
+        "@angular/compiler-cli": "^8.2.14",
+        "@mobiscroll/angular": "https://npm.mobiscroll.com/@mobiscroll/angular-trial/-/angular-trial-4.9.0.tgz",
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.7.10",
+        "nodemon": "^1.19.4"
+    }
+}

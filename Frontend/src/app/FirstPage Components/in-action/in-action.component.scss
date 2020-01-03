@@ -1,0 +1,49 @@
+
+// -------------ARL----------
+@import "./../../../scss/variable";
+.container
+{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-display: arial;
+}
+
+
+.heading::after{
+  background: $content-color;
+    content: "'";
+    display: block;
+    height: 4px;
+    margin: 15px auto 0;
+    text-indent: -9999px;
+    width: 44px;
+}
+
+// created grid for content and image
+.grid_arl
+{
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 240px 350px;
+    grid-gap:5px;
+    overflow: hidden;                                   /*this will hide the over flowing content of a grid and will not show that extra */
+    align-content: center;                              /*aligns al the content of page to center */
+    background-color: white;
+    position: relative;
+    padding: 0 0 0 15%;
+}
+
+.arlimage1 {background-image: url(../Images/arlimage1.jpg);}
+.arlimage2 {background-image: url(../Images/arlimage2.jpg);}
+.arlimage3 {background-image: url(../Images/arlimage3.jpg);}
+
+.arlgridcontent{
+    text-align: left;
+}
+
+#card{
+  text-align: justiy;
+}
+
+

@@ -1,0 +1,47 @@
+@import "./../../scss/variable";
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+  // max-width: 20%;
+}
+
+// changed the style of  material expansion panel
+ .mat-expansion-panel{
+
+  border: 0.5px solid $content-color;
+  border-radius: 10px !important;
+  margin: 20px;
+  min-height: 70px;
+ }
+
+ .mat-panel-title
+ {
+  font-weight: bolder !important;
+ }
+ .mat-expansion-panel{
+  background-color: rgb(253, 253, 253) !important;
+ }
+
+//  changed the color for hover elements
+.test :hover{
+  background-color: rgb(253, 253, 253) !important;
+}
+
+
+ .pointerCursor {
+   cursor: pointer;
+ }
+
+// styled booking button
+.bookingBtn{
+  color: #ffffff;
+  outline: 0;
+  background-color: $content-color;
+}
+
+
+.bookingBtn:hover{
+  background-color: $content-color !important;
+}
+

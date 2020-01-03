@@ -1,0 +1,84 @@
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>  
+  
+  <body>
+    <!-- -------------------------Donation images--------------------- -->
+
+    
+    <div class="container" >
+      <h2 class="heading">In 2018, your donations made a <br>huge impact for animals in need</h2>
+    </div>
+    <br>
+    <div class="DonationSectionGrid">
+      <div class="donationgrid">
+        <div class="box a">  
+          <div class=" A ">
+            <div class="donationcontentgrid contentsize1">
+                <h1>{{ animalcount }}</h1>
+                <h4>animals where assisted in 2018</h4>
+            </div>
+                  
+          </div> 
+        </div>
+        <div class="box b">
+          <div class="A">
+              <div class="donationcontentgrid B ">
+                <!-- <h1><mat-icon class="icons">home</mat-icon></h1> -->
+                <h1><i class="fas fa-home"></i></h1>
+                    <h1>{{ countStatus }}</h1>
+                    <h4>animals found their forever homes</h4> 
+              </div>
+          </div>
+          
+        </div>
+        <div class="box c">
+            <div class="A">
+              <!-- added progressing circle from material -->
+            <div class="donationcontentgrid C">
+                <circle-progress
+                [percent]="percentadopted"
+                [radius]="10"
+                [outerStrokeWidth]="2"
+                [innerStrokeWidth]="2"
+                [space] = "-2"
+                [outerStrokeColor]="'#4882c2'"
+                [innerStrokeColor]="'#e7e8ea'"
+                [titleFontSize]= "7"
+                [unitsFontSize]= "7"
+                [showSubtitle] = "false"
+                [animation]="true"
+                [animationDuration]="300"
+                [startFromZero]="true"
+                [responsive]="true"
+                [titleColor]="'#ffffff'"
+                [unitsColor]="'#ffffff'"
+              ></circle-progress>             
+                 
+                  <h4>of animals were adopted, returned to field/owner, or transferred<br>
+                    <h5>(live release rate) </h5></h4>
+            </div>
+            </div>
+        </div>
+        <div class="box d">
+            <div class="A">
+            <div class="donationcontentgrid D"> 
+                     <!-- added values from db  -->
+                     <h1><i class="fas fa-plus-square " ></i>  </h1> 
+                  <h1>{{veterinarycarecount}}</h1>
+                  <h4>animals were given access to high-quality, affordable veterinary care right in their community</h4> 
+            </div>
+            </div>
+        </div>
+        <div class="box e">
+            <div class="A">
+            <div class="donationcontentgrid C"> 
+              <h1><i class="fas fa-user-shield"></i></h1>        
+                  <h1>{{crueltycase}}</h1>
+                  <h4>animals helped in cases of cruelty and neglect</h4> 
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
